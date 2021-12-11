@@ -1,4 +1,70 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+
+<div class="">
+    <div class="w-72 py-16 fixed h-screen z-40 bg-black space-y-7">
+        <div class="text-red-custom text-2xl px-6">Chopshop</div>
+        <div class="flex flex-col h-full">
+            <div class="flex-grow">
+                <div class="text-gray-50  grid">
+                    <a href="{{ route('dashboard') }}" class="py-5 w-full px-6 space-x-4 cursor-pointer hover:bg-gray-500">
+                        Dashboard
+                    </a>
+                    <a href="{{ route('dashboard') }}" class="py-5 w-full px-6 space-x-4 cursor-pointer hover:bg-gray-500">
+                        Orders
+                    </a>
+                    <a href="{{ route('dashboard') }}" class="py-5 w-full px-6 space-x-4 cursor-pointer hover:bg-gray-500">
+                        Stocks
+                    </a>
+                    <a href="{{ route('dashboard') }}" class="py-5 w-full px-6 space-x-4 cursor-pointer hover:bg-gray-500">
+                        Customers
+                    </a>
+                    <a href="{{ route('addProduct') }}" class="py-5 w-full px-6 space-x-4 cursor-pointer hover:bg-gray-500">
+                        Add product
+                    </a>
+                </div>
+            </div>
+            <div class="text-gray-50 px-2 py-10" style="">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                        Logout
+                    </x-responsive-nav-link>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white py-4 pl-72 fixed w-full top-0">
+        <div class="flex px-7">
+            <div class="flex-grow flex">
+                <div class="bg-gray-100 rounded-lg w-96">
+                    <input type="text" class="bg-transparent border-0 focus:outline-none focus:ring-0 w-full text-xs mt-2 px-5 placeholder-gray-400" placeholder="Search">
+                </div>
+            </div>
+            <div class="flex justify-center gap-3 items-center">
+                <div class="relative">
+                    zxdf
+                    <div class="absolute p-2 rounded-full bg-red-600 border border-white -top-2 -right-1"></div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="{{ asset('/images/service-02.jpg') }}" class="bottom-1 relative w-12 h-12 rounded-full">
+                    <div class="uppercase ">
+                        ekechukwu
+                        <span>d</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{{-- <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -89,4 +155,4 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> --}}

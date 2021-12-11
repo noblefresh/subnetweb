@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <script defer src="{{ asset('fontawesome-free-5.15.4-web/js/all.js') }}"></script>
+        <script src="{{ asset('fontawesome-free-5.15.4-web/js/all.js') }}"></script>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -16,24 +16,9 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/custom.js') }}"></script>
     </head>
     <body class="antialised">
-       
-        @include('navBar')
-        <script>
-             $(document).ready(function() {
-                window.addEventListener('scroll',function (){
-                    $scrolled = window.scrollY;
-                    if($scrolled > 150){
-                        $('.topNav').addClass('shadow-lg md:bg-opacity-100')
-                    }else{
-                        $('.topNav').removeClass('shadow-lg md:bg-opacity-100')
-                    }
-                })
-                $('.bars').on('click',function(){
-                    $('.menu').toggleClass('hidden flex')
-                })
-            })
-        </script>
+       HELLO WORLD
     </body>
 </html>
